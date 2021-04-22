@@ -1,0 +1,184 @@
+// start main1 content -------------------------------------
+.main1 {
+  background-color: #f8f7ff;
+  padding: 26px 0px;
+  margin-bottom: 50px;
+  a {
+    text-align: center;
+    display: block;
+    color: $maincolor2;
+    font-weight: 500;
+    &:last-of-type {
+      font-size: 30px;
+      font-weight: 900;
+      color: $maincolor1;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+// end main1 content -------------------------------------
+// start main2 content -------------------------------------
+.main2 {
+  margin: 50px 0px 100px;
+  .container .row .main2-img {
+    img {
+      width: 100%;
+      transform: scale(1.1) translate(0px, 50px);
+      height: 100%;
+      @include maxmobile {
+        width: 80%;
+        margin: auto;
+        display: block;
+      }
+    }
+  }
+  .container .row .main2-text {
+    text-align: right;
+    padding: 0px;
+    padding-top: 100px;
+    color: $maincolor2;
+    @include maxmobile {
+      width: 80%;
+      display: block;
+      margin: auto;
+    }
+    @include maxmediam {
+      font-size: 14px;
+    }
+    @include maxsmall {
+      font-size: 11px;
+    }
+    p.tittle {
+      font-size: 35px;
+      font-weight: 900;
+      color: $maincolor1;
+      margin-bottom: 1px;
+      @include maxmediam {
+        font-size: 30px;
+      }
+      @include maxsmall {
+        font-size: 25px;
+      }
+    }
+    .inner-text .list {
+      margin-top: 35px;
+      @include maxmediam {
+        margin-top: 20px;
+      }
+      .imgs {
+        position: relative;
+
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          padding: 0;
+          transform: translate(-50%, -50%);
+          @include maxmediam {
+            transform: scale(0.8) translate(-50%, -50%);
+          }
+          @include maxsmall {
+            transform: scale(0.7) translate(-50%, -50%);
+          }
+          @include maxmobile {
+            transform: scale(0.9) translate(-50%, -50%);
+          }
+          &:nth-of-type(1) {
+            z-index: 4;
+          }
+          &:nth-of-type(2) {
+            z-index: 3;
+          }
+          &:nth-of-type(3) {
+            z-index: 2;
+          }
+          &:nth-of-type(4) {
+            z-index: 1;
+          }
+        }
+      }
+      .text {
+        color: $maincolor2;
+        @include maxmobile {
+          text-align: right;
+        }
+        p.head {
+          margin: 3px;
+          font-weight: 600;
+          font-size: 20px;
+          color: $maincolor1;
+          @include maxmediam {
+            font-size: 17px;
+            margin: 4px 0px 0px;
+            padding-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+// end main2 content -------------------------------------
+// start main3 content -------------------------------------
+.main3 {
+  background-image: url(/imges/map.png);
+  background-size: cover;
+  height: 600px;
+  margin-top: 400px;
+  position: relative;
+
+  img {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+  }
+  .form {
+    text-align: center;
+    padding: 30px;
+    box-shadow: 3px 3px 13px rgb(194, 193, 193);
+    width: 80%;
+    margin: auto;
+    background-color: white;
+    z-index: 1;
+    transform: translate(0px, -300px);
+    border-radius: 10px;
+    p {
+      font-size: 30px;
+      font-weight: 700;
+      color: $maincolor1;
+      @include maxsmall {
+        font-size: 24px;
+      }
+    }
+    input,
+    textarea {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      border: none;
+      background-color: #f4f6fa;
+      border-radius: 30px;
+      margin-bottom: 10px;
+      direction: rtl;
+      outline: none;
+      &:last-child {
+        background: linear-gradient(45deg, #7b1e5e, #a11c69);
+        width: 20%;
+        color: white;
+        @include maxsmall {
+          width: 40%;
+        }
+      }
+    }
+    .name {
+      display: inline-block;
+      vertical-align: top;
+      width: 49.5%;
+      @include maxsmall {
+        width: 100%;
+      }
+    }
+  }
+}
+// end main3 content -------------------------------------
