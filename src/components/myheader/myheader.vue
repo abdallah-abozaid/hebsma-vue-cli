@@ -12,7 +12,7 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active" @click="none()">
-          <router-link to="/" class="nav-link"><fa-icon :icon="['fas','home']"/> الرئيسيه </router-link>
+          <router-link to="/" class="nav-link" exact><fa-icon :icon="['fas','home']"/> الرئيسيه </router-link>
           
       </li>
       <li class="nav-item" @click="color()">
@@ -87,7 +87,6 @@ export default {
 //- ------------------------------------------------- end media query ----------------------------------
 
 .navbar{
-  
   position: relative;
   .extra{
    position: absolute;
@@ -156,7 +155,10 @@ export default {
         font-size: 18px;
         border-bottom: 2px solid white;
         border-width: 0px;
-        
+        &:hover{
+            border-bottom: 3px solid #f0e6ed!important;
+  background-color: rgba(255, 255, 255, 0.178);
+        }
         @include maxlarge{
           margin-left: 8px;
         }
@@ -181,5 +183,9 @@ export default {
         }
         }
     }
+}
+.router-link-exact-active{
+  border-bottom: 3px solid #f0e6ed!important;
+  background-color: rgba(255, 255, 255, 0.178);
 }
 </style>

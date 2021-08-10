@@ -1,9 +1,5 @@
 <template>
     <div class="content6">
-
-
-
-
       <div class="content6-header"> 
         <p class="header wow animate__animated animate animate__zoomInDown">جديد دوراتنا </p>
       </div>
@@ -113,6 +109,7 @@ export default {
   }
   .content6-corse {
     padding: 0;
+    transition: all .5s linear;
     .corse {
       display: inline-block;
       vertical-align: top;

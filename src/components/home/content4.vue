@@ -15,36 +15,60 @@
               <li data-filter=".four">هوية بصرية </li>
             </ul>
 
-<div class="row filter row-cols-3">
+<div class="row filter row-cols-1 row-cols-sm-2 row-cols-md-3">
 
   <div class="col  sm-6 mix one ">
     <div class="card">
       <img src="@/assets/content4/1.png" class="card-img-top" alt="...">
+      <div class="outer">
+        <span> مواقع الانترنت</span><br/>
+        <a href="#">اقرا المزيد</a>
+      </div>
     </div>
   </div>
   <div class="col mix one ">
     <div class="card">
       <img src="@/assets/content4/2.png" class="card-img-top" alt="...">
+      <div class="outer">
+        <span> مواقع الانترنت</span><br/>
+        <a href="#">اقرا المزيد</a>
+      </div>
     </div>
   </div>
   <div class="col  mix two ">
     <div class="card">
       <img src="@/assets/content4/3.png" class="card-img-top" alt="...">
+       <div class="outer">
+        <span>تطبيقات الموبايل</span><br/>
+        <a href="#">اقرا المزيد</a>
+      </div>
     </div>
   </div>
   <div class="col mb-4 mix three">
     <div class="card">
       <img src="@/assets/content4/4.png" class="card-img-top" alt="...">
+       <div class="outer">
+        <span> فيديو موشن</span><br/>
+        <a href="#">اقرا المزيد</a>
+      </div>
     </div>
   </div>
   <div class="col mb-4 mix two ">
     <div class="card">
       <img src="@/assets/content4/5.png" class="card-img-top" alt="...">
+       <div class="outer">
+        <span> تطبيقات الموبايل</span><br/>
+        <a href="#">اقرا المزيد</a>
+      </div>
     </div>
   </div>
   <div class="col mb-4 mix four">
     <div class="card">
       <img src="@/assets/content4/6.png" class="card-img-top" alt="...">
+       <div class="outer">
+        <span> هوية بصرية</span><br/>
+        <a href="#">اقرا المزيد</a>
+      </div>
     </div>
   </div>
 </div>
@@ -193,6 +217,34 @@ export default {
       padding: 4px!important;
       margin-bottom:0px!important;
     }
+    }
+    .card{
+      position: relative;
+      overflow: hidden;
+    }
+    .card .outer{
+      position: absolute;
+      top: -100%;
+      right: 0;
+      width: 70%;
+      height: 70%;
+      background-color: #cb1a75;
+      border-bottom-left-radius:100%;
+      transition: all .3s linear;
+      text-align: center;
+      padding-top: 20%;
+    }
+    .card .outer span{
+      font-size: 26px;
+      @include maxmediam(){
+        font-size: 20px;
+      }
+    }
+    .card:hover .outer{
+      top: 0%;
+    }
+    .col:nth-of-type(1) .outer{
+      top: 0;
     }
     
 </style>
